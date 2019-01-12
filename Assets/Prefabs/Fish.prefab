@@ -222,7 +222,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502842325585220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58713543, y: 0.037, z: 0.35907477}
+  m_LocalPosition: {x: 0.839, y: 0.037, z: 0.442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4147617295288794}
@@ -542,9 +542,9 @@ MonoBehaviour:
   Target: {fileID: 0}
   TurningForce: 1
   PulseFrequency: 1
-  PulseStrength: 3
+  PulseStrength: 2
   DoPulse: 0
-  Life: 12
+  Life: 14
 --- !u!135 &135403292166506722
 SphereCollider:
   m_ObjectHideFlags: 1

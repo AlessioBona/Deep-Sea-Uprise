@@ -12,19 +12,16 @@ public class BarricadeScript : MonoBehaviour {
     [SerializeField]
     Texture[] breakingTextures;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Barricade hit by: " + collision.gameObject.name);
+        
+        var fish = collision.gameObject.GetComponent<FishBehaviour>();
+        if (fish == null)
+            return;
+        
+        fish.Die();
+        
         if(healthPoints >= 0)
         {
             healthPoints--;

@@ -16,6 +16,7 @@ public class SpawnManager : MonoBehaviour
 	void Start()
 	{
 		SpawnPositions = GetComponentsInChildren<FishGroupSpawnPosition>().ToList();
+		_lastTimeSpawned = Time.realtimeSinceStartup - SpawnFrequency - 1f;
 	}
 	void Update ()
 	{
