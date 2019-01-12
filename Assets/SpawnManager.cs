@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 	public float SpawnFrequency;
 	private float _lastTimeSpawned;
 
-	public float Difficulty = 4f;
+	public float Difficulty = 0f;
 	public float DifficultyPerSecond=0.2f;
 
 	void Start()
@@ -20,13 +20,12 @@ public class SpawnManager : MonoBehaviour
 	void Update ()
 	{
 		Difficulty += DifficultyPerSecond * Time.deltaTime;
-		Debug.Log(Difficulty);
 		
 		if (Time.realtimeSinceStartup - _lastTimeSpawned > SpawnFrequency)
 		{
 			_lastTimeSpawned = Time.realtimeSinceStartup;
 			var index = Mathf.FloorToInt(Random.Range(0, SpawnPositions.Count));
-			SpawnPositions[index].Spawn(Mathf.FloorToInt(Difficulty), 0.1f, Difficulty);
+			SpawnPositions[index].Spawn(Mathf.FloorToInt(Difficulty+3), 0.1f, Difficulty);
 		}
 		
 	}

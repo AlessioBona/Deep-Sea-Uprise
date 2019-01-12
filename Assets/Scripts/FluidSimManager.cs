@@ -27,7 +27,7 @@ public class FluidSimManager: MonoBehaviour
         // Add Flow Sources' Velocities
         foreach (var flowSource in FlowSources)
         {
-            FluidSim.FlowSourceAtPos(flowSource.transform.position, flowSource.FlowStrength * flowSource.transform.TransformDirection(Vector3.forward + 0.1f*Vector3.right*Random.Range(-1,1)).ToPlaneVector2() );            
+            FluidSim.FlowSourceAtPos(flowSource.transform.position, flowSource.FlowStrength * flowSource.transform.TransformDirection(Vector3.forward + 0.3f*Vector3.right*Random.Range(-1,1)).ToPlaneVector2() );            
         }
         
         FluidSim.UpdateFlow();
@@ -38,6 +38,6 @@ public class FluidSimManager: MonoBehaviour
             floatable.Rigidbody.velocity = FluidSim.GetVelocityAtPos(floatable.transform.position) * 10f;
         }
         
-        FluidSim.ScaleDensity(0.99f);
+        FluidSim.ScaleDensity(0.995f);
     }
 }

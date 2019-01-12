@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnFrequency: 5
-  Difficulty: 4
+  Difficulty: 0
   DifficultyPerSecond: 0.06
 --- !u!4 &57870294
 Transform:
