@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretScript : MonoBehaviour {
+public class TurretScript : MonoBehaviour{
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +13,5 @@ public class TurretScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
 }
