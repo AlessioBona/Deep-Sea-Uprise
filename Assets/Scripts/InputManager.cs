@@ -8,6 +8,8 @@ public class InputManager : MonoBehaviour {
     [SerializeField]
     Camera mainCamera;
 
+    private Plane groundPlane;
+
     public bool positioning { get; private set; }
 
     public bool directing { get; private set; }
@@ -16,7 +18,7 @@ public class InputManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        groundPlane = new Plane(Vector3.up, Vector3.zero);
 	}
 	
 	// Update is called once per frame
@@ -29,10 +31,24 @@ public class InputManager : MonoBehaviour {
 
         if (positioning)
         {
-            //selected turret POSITION should change based on mouse position
-        } else if (directing)
+            if(selectedTurret != null)
+            {
+                float dist;
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                groundPlane.Raycast(ray, out dist);
+                Vector3 position = ray.GetPoint(dist);
+
+                selectedTurret.transform.position = position;
+
+
+            }
+        }
+        else if (directing)
         {
-            //selected turret DIRECTION should change based on mouse position
+            if (selectedTurret != null)
+            {
+
+            }
         }
     }
 
