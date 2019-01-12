@@ -7,7 +7,7 @@ public class BarricadeScript : MonoBehaviour {
 
     [SerializeField]
     float healthPoints;
-    SkinnedMeshRenderer meshRend;
+    MeshRenderer meshRend;
 
     [SerializeField]
     Texture[] breakingTextures;
@@ -48,7 +48,7 @@ public class BarricadeScript : MonoBehaviour {
 
     void SwitchTexture(Texture newTexture)
     {
-        meshRend = GetComponentInChildren<SkinnedMeshRenderer>();
+        meshRend = GetComponentInChildren<MeshRenderer>();
         meshRend.material.mainTexture = newTexture;
     }
 }
