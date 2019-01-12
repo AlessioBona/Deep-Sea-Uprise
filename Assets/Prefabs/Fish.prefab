@@ -542,7 +542,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TurningForce: 1
   PulseFrequency: 1
-  PulseStrength: 1
+  PulseStrength: 3
   DoPulse: 0
   Life: 12
 --- !u!135 &135403292166506722
