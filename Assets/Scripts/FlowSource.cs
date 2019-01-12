@@ -15,8 +15,8 @@ public class FlowSource : MonoBehaviour
 
     void Update()
     {
-        // TODO if is being positioned
-        FlowStrength = false ? 0 : _actualFlowStrength;
+        // while the turret is being moved, it is not working and should not create flow
+        FlowStrength = _turretScript.working ? _actualFlowStrength:0;
     }
 
     private void OnDestroy()

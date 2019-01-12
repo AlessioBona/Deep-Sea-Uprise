@@ -20,12 +20,13 @@ public class SpawnManager : MonoBehaviour
 	void Update ()
 	{
 		Difficulty += DifficultyPerSecond * Time.deltaTime;
+		Debug.Log(Difficulty);
 		
 		if (Time.realtimeSinceStartup - _lastTimeSpawned > SpawnFrequency)
 		{
 			_lastTimeSpawned = Time.realtimeSinceStartup;
 			var index = Mathf.FloorToInt(Random.Range(0, SpawnPositions.Count));
-			SpawnPositions[index].Spawn(Mathf.FloorToInt(Difficulty), 0.3f);
+			SpawnPositions[index].Spawn(Mathf.FloorToInt(Difficulty), 0.1f, Difficulty);
 		}
 		
 	}

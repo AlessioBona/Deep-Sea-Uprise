@@ -27,7 +27,7 @@ public class FluidSimManager: MonoBehaviour
         // Add Flow Sources' Velocities
         foreach (var flowSource in FlowSources)
         {
-            FluidSim.FlowSourceAtPos(flowSource.transform.position, flowSource.FlowStrength * flowSource.transform.TransformDirection(Vector3.forward).ToPlaneVector2() );            
+            FluidSim.FlowSourceAtPos(flowSource.transform.position, flowSource.FlowStrength * flowSource.transform.TransformDirection(Vector3.forward + 0.1f*Vector3.right*Random.Range(-1,1)).ToPlaneVector2() );            
         }
         
         FluidSim.UpdateFlow();

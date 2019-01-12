@@ -23,6 +23,7 @@ public class FishBehaviour : MonoBehaviour
 		_rigidbody = GetComponent<Rigidbody>();
 		lastTimePulsed = Time.realtimeSinceStartup;
 		Target = FindObjectOfType<TargetObject>().gameObject;
+		Life += Random.Range(-0.1f, .1f) * Life;
 	}
 	
 	void Update()

@@ -4,13 +4,14 @@ public class FishGroupSpawnPosition : MonoBehaviour
 {
 	public GameObject FishPrefab;
 
-	public void Spawn(int count, float radius)
+	public void Spawn(int count, float radius, float fishSpeedUp)
 	{
 		for (int i = 0; i < count; i++)
 		{
 			var pos = GetRandomPosition(radius);
 			var rotation = Quaternion.identity;
 			var go = Instantiate(FishPrefab, pos, rotation, transform);
+			go.GetComponent<FishBehaviour>().PulseStrength += fishSpeedUp;
 		}
 	}
 
