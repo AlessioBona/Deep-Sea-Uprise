@@ -41,7 +41,7 @@ public class FishBehaviour : MonoBehaviour
 		var forward = transform.forward;
 		var targetDirection = Target.transform.position - transform.position;
 		var torqueDirection = Vector3.Cross(forward, targetDirection);
-		_rigidbody.AddTorque(torqueDirection*TurningForce);
+		_rigidbody.AddTorque(torqueDirection*TurningForce*Time.deltaTime*30);
 	}
 
 	void PulseForward()
@@ -49,7 +49,7 @@ public class FishBehaviour : MonoBehaviour
 		if (!DoPulse || Time.realtimeSinceStartup - lastTimePulsed > PulseFrequency)
 		{
 			lastTimePulsed = Time.realtimeSinceStartup;
-			_rigidbody.AddForce(transform.forward*PulseStrength);
+			_rigidbody.AddForce(transform.forward*PulseStrength*Time.deltaTime*30);
 		}
 	}
 

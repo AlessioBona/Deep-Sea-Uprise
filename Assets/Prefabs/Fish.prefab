@@ -222,7 +222,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502842325585220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.839, y: 0.037, z: 0.442}
+  m_LocalPosition: {x: 0.575, y: 0.037, z: 0.406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4147617295288794}
@@ -434,7 +434,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0.2
-  m_AngularDrag: 0.5
+  m_AngularDrag: 0.3
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -540,9 +540,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  TurningForce: 1
+  DeathEffectPrefab: {fileID: 1649623915884954, guid: 26064e8f6aa70f8419f30e168f5dbede,
+    type: 2}
+  TurningForce: 0.8
   PulseFrequency: 1
-  PulseStrength: 2
+  PulseStrength: 4
   DoPulse: 0
   Life: 14
 --- !u!135 &135403292166506722
@@ -555,8 +557,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.017773777
-  m_Center: {x: 0, y: 0, z: 0.00050863624}
+  m_Radius: 0.012655839
+  m_Center: {x: 0, y: 0, z: 0.0008096844}
 --- !u!137 &137204565841747706
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

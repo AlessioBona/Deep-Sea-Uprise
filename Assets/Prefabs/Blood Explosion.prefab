@@ -94,8 +94,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649623915884954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.07, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.551, y: 0, z: 0.286}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 4484758770404676}
   - {fileID: 4197242239920450}
@@ -185,7 +185,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -2051,11 +2051,11 @@ ParticleSystem:
         - serializedVersion: 3
           time: 1
           value: 0.054053217
-          inSlope: -4.7335305
-          outSlope: -4.7335305
+          inSlope: -0.13601112
+          outSlope: -0.13601112
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.12019239
+          inWeight: 0.19871795
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4716,7 +4716,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -6573,20 +6573,20 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: -1.6061778
+          outSlope: -1.6061778
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.20192307
         - serializedVersion: 3
           time: 1
-          value: 0.054053217
-          inSlope: -4.7335305
-          outSlope: -4.7335305
+          value: -0.0000010430813
+          inSlope: -0.14539239
+          outSlope: -0.14539239
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.12019239
+          inWeight: 0.18589741
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -9192,7 +9192,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 19ba107ea935945ea8e0b2f1c0620f80, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9248,7 +9248,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 19ba107ea935945ea8e0b2f1c0620f80, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
