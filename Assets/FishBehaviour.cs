@@ -59,12 +59,29 @@ public class FishBehaviour : MonoBehaviour
 			Instantiate(DeathEffectPrefab, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
+	
+	public void DieTimeOut()
+	{
+		StartCoroutine(Shrink(0.5f));
+	}
+
+	private IEnumerator Shrink(float time)
+	{
+		for (float t = 0; t <= time; t+= Time.deltaTime)
+		{
+			transform.localScale = Vector3.one * ((time-t) / time);
+			yield return null;
+		}
+
+		yield return null;
+		Destroy(gameObject);
+	}
 
 	void TickDownLife()
 	{
 		Life -= Time.deltaTime;
 		if (Life < 0)
-			Die();
+			DieTimeOut();
 	}
 	
 }

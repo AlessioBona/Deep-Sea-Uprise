@@ -544,7 +544,7 @@ MonoBehaviour:
     type: 2}
   TurningForce: 0.8
   PulseFrequency: 1
-  PulseStrength: 4
+  PulseStrength: 5
   DoPulse: 0
   Life: 14
 --- !u!135 &135403292166506722
