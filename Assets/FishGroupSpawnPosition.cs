@@ -21,4 +21,9 @@ public class FishGroupSpawnPosition : MonoBehaviour
 		offset.y = 0;
 		return transform.position + offset;
 	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawWireSphere(transform.position, 0.1f);
+	}
 }
