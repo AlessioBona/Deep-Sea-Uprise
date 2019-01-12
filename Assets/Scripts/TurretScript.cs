@@ -6,6 +6,7 @@ public class TurretScript : MonoBehaviour{
 
     [SerializeField]
     public Transform cannonTransform;
+    public bool working;
 
     // Use this for initialization
     void Start () {
