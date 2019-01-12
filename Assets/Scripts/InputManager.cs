@@ -8,6 +8,17 @@ public class InputManager : MonoBehaviour {
     [SerializeField]
     Camera mainCamera;
 
+    private void Awake()
+    {
+        Camera[] cameras = FindObjectsOfType<Camera>();
+        foreach (Camera cam in cameras)
+        {
+            if (cam != mainCamera){
+                cam.gameObject.SetActive(false);
+            }
+        }
+    }
+
     private Plane groundPlane;
 
     public bool positioning { get; private set; }
