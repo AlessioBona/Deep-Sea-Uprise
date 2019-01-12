@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TurretScript : MonoBehaviour{
 
+    [SerializeField]
+    Transform cannonTransform;
+
     // Use this for initialization
     void Start () {
 		
