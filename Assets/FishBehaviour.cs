@@ -7,6 +7,8 @@ public class FishBehaviour : MonoBehaviour
 {
 	public GameObject Target;
 
+	public GameObject DeathEffectPrefab;
+
 	private Rigidbody _rigidbody;
 	public float TurningForce;
 
@@ -51,8 +53,10 @@ public class FishBehaviour : MonoBehaviour
 		}
 	}
 
-	void Die()
+	public void Die()
 	{
+		if (DeathEffectPrefab != null)
+			Instantiate(DeathEffectPrefab, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
 
