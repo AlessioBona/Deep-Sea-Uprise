@@ -7,10 +7,14 @@ public class BarricadeScript : MonoBehaviour {
 
     [SerializeField]
     float healthPoints;
+    SkinnedMeshRenderer meshRend;
+    [SerializeField]
+    Texture newTexture;
 
 	// Use this for initialization
 	void Start () {
-		
+        meshRend = GetComponentInChildren<SkinnedMeshRenderer>();
+        meshRend.material.mainTexture = newTexture;
 	}
 	
 	// Update is called once per frame
