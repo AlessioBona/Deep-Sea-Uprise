@@ -24,9 +24,12 @@ public class InputManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // check if click
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && !directing)
         {
             DoRaycast();
+        } else if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && directing)
+        {
+            directing = false;
         }
 
         if (positioning)
@@ -84,20 +87,17 @@ public class InputManager : MonoBehaviour {
     private void TogglePositionAndDirecting()
     {
         // if not directing, then toggle positioning
-        if (Input.GetMouseButtonDown(0) && !directing)
+        if (Input.GetMouseButtonDown(0))
         {
             positioning = !positioning;
 
         }
 
         // if not positioning, then toggle directing
-        if (Input.GetMouseButtonDown(1) && !directing && !positioning)
+        if (Input.GetMouseButtonDown(1) && !positioning)
         {
             directing = true;
 
-        } else if (Input.GetMouseButtonDown(1) && directing)
-        {
-            directing = false;
-        }
+        } 
     }
 }
