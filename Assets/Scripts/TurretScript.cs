@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretScript : MonoBehaviour{
 
     [SerializeField]
-    Transform cannonTransform;
+    public Transform cannonTransform;
 
     // Use this for initialization
     void Start () {

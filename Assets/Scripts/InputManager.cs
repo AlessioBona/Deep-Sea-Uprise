@@ -47,7 +47,16 @@ public class InputManager : MonoBehaviour {
         {
             if (selectedTurret != null)
             {
+                float dist;
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                groundPlane.Raycast(ray, out dist);
+                Vector3 position = ray.GetPoint(dist);
 
+                Vector3 relativePos = position - selectedTurret.transform.position;
+
+                // the second argument, upwards, defaults to Vector3.up
+                Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+                selectedTurret.transform.rotation = rotation;
             }
         }
     }
@@ -82,9 +91,13 @@ public class InputManager : MonoBehaviour {
         }
 
         // if not positioning, then toggle directing
-        if (Input.GetMouseButtonDown(1) && !positioning)
+        if (Input.GetMouseButtonDown(1) && !directing && !positioning)
         {
-            directing = !directing;
+            directing = true;
+
+        } else if (Input.GetMouseButtonDown(1) && directing)
+        {
+            directing = false;
         }
     }
 }
