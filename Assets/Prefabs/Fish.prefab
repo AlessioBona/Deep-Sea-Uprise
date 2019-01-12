@@ -232,7 +232,7 @@ MonoBehaviour:
   PulseFrequency: 1
   PulseStrength: 5
   DoPulse: 0
-  Life: 6
+  Life: 10
 --- !u!135 &135403292166506722
 SphereCollider:
   m_ObjectHideFlags: 1
