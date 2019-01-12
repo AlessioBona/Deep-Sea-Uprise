@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour {
         } else if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && directing)
         {
             directing = false;
+            selectedTurret.working = true;
         }
 
         if (positioning)
@@ -89,15 +90,22 @@ public class InputManager : MonoBehaviour {
         // if not directing, then toggle positioning
         if (Input.GetMouseButtonDown(0))
         {
-            positioning = !positioning;
+            if (positioning) { 
+                positioning = false;
+                selectedTurret.working = true;
+            } else {
+                positioning = true;
+                selectedTurret.working = false;
+            }
 
         }
+
 
         // if not positioning, then toggle directing
         if (Input.GetMouseButtonDown(1) && !positioning)
         {
             directing = true;
-
+            selectedTurret.working = false;
         } 
     }
 }
